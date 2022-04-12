@@ -67,34 +67,38 @@ if($now > '21:01' && $now <= '04:59') {echo "Good night!";};
     *               Display a different greeting message depending on the age of user
   *-------------------------------------------------------------------------------------------------
   *-------------------------------------------------------------------------------------------------
-  *                                         Exercice n°4 (TODO)
+  *                                         Exercice n°4 
   *             Display a different greeting message depending on the age of user and gender
   *-------------------------------------------------------------------------------------------------
   *-------------------------------------------------------------------------------------------------
-  *                                         Exercice n°5 (TODO)
+  *                                         Exercice n°5 
   *     Display a different greeting message depending on the age of user, gender and mothertongue
   *-------------------------------------------------------------------------------------------------
   */
 
-if ($_GET['gender'] === 'man' && $_GET['language'] === "yes") {
-    if ($_GET['age'] <= 12) {echo "Hello mister kiddo!";} 
-    else if ($_GET['age'] <= 18){echo "Hello mister Teenager!";} 
-    else if ($_GET['age'] <= 115) {echo "Hello mister Adult!";} 
+$age = isset($_GET['age']);
+$gender = isset($_GET['gender']);
+$language = isset($_GET['language']);
+
+if ($gender === 'man' && $language === "yes") {
+    if ($age <= 12) {echo "Hello mister kiddo!";} 
+    else if ($age <= 18){echo "Hello mister Teenager!";} 
+    else if ($age <= 115) {echo "Hello mister Adult!";} 
     else {echo "Wow! Still alive? Are you a robot, like me? Can I hug you?";}  
-} else if ($_GET['gender'] === 'man' && $_GET['language' ]=== "no") {
-    if ($_GET['age'] <= 12) {echo "Aloha mister kiddo!";} 
-    else if ($_GET['age'] <= 18){echo "Aloha mister Teenager!";} 
-    else if ($_GET['age'] <= 115) {echo "Aloha mister Adult!";} 
+} elseif ($gender === 'man' && $language=== "no") {
+    if ($age <= 12) {echo "Aloha mister kiddo!";} 
+    else if ($age <= 18){echo "Aloha mister Teenager!";} 
+    else if ($age <= 115) {echo "Aloha mister Adult!";} 
     else {echo "Wow! Still alive? Are you a robot, like me? Can I hug you?";}  
-} else if ($_GET['gender'] === 'woman' && $_GET['language' ]=== "yes") {
-    if ($_GET['age'] <= 12) {echo "Hello mister kiddo!";} 
-    else if ($_GET['age'] <= 18){echo "Hello mister Teenager!";} 
-    else if ($_GET['age'] <= 115) {echo "Hello mister Adult!";} 
+} elseif ($gender === 'woman' && $language === "yes") {
+    if ($age <= 12) {echo "Hello mister kiddo!";} 
+    else if ($age <= 18){echo "Hello mister Teenager!";} 
+    else if ($age <= 115) {echo "Hello mister Adult!";} 
     else {echo "Wow! Still alive? Are you a robot, like me? Can I hug you?";}  
 } else {
-    if ($_GET['age'] <= 12) {echo "Aloha miss kiddo!";} 
-    else if ($_GET['age'] <= 18){echo "Aloha miss Teenager!";} 
-    else if ($_GET['age'] <= 115) {echo "Aloha miss Adult!";} 
+    if ($age <= 12) {echo "Aloha miss kiddo!";} 
+    else if ($age <= 18){echo "Aloha miss Teenager!";} 
+    else if ($age <= 115) {echo "Aloha miss Adult!";} 
     else {echo "Wow! Still alive? Are you a robot, like me? Can I hug you?";}  
 }
 
@@ -119,8 +123,8 @@ if ($_GET['gender'] === 'man' && $_GET['language'] === "yes") {
   *       Display a message according to info in input
   *----------------------------------------------------
   */
-$age = $_GET['age'];
-$gender = $_GET['gender'];
+$age = isset($_GET['age']);
+$gender = isset($_GET['gender']);
 
 if(isset($age) AND isset($gender)){
     if($gender == "woman" && $age > 21 && $age < 40) {
