@@ -119,9 +119,11 @@ if ($_GET['gender'] === 'man' && $_GET['language'] === "yes") {
   *       Display a message according to info in input
   *----------------------------------------------------
   */
+$age = $_GET['age'];
+$gender = $_GET['gender'];
 
-if(isset($_GET['age']) AND isset($_GET['gender'])){
-    if($_GET['gender'] == "woman" && $_GET['age'] > 21 && $_GET['age'] < 40) {
+if(isset($age) AND isset($gender)){
+    if($gender == "woman" && $age > 21 && $age < 40) {
         echo "welcome to the team !";
     } else {
         echo "Sorry you don't fit the criteria";
