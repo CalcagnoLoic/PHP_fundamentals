@@ -16,7 +16,7 @@ Les exercices abordés sont les suivants :
 
 * Les arrays
 
-* Les loops
+* Les boucles
 
 * Les fonctions
 
