@@ -13,34 +13,21 @@
 
     <h2>Veuillez rentrer les informations requises :</h2>
 
-    <form action="" method="get"></form>
-    <label for="name">Entrez le nom de votre enfant, svp : </label>
-    <input type="" name="name"><br>
-    <label for="gender">Entre le genre de votre enfant, svp :</label>
-    <input type="radio" name="gender" value="boy">Garçon
-    <input type="radio" name="gender" value="boy">Fille<br>
-    <label for="prof">Entrez le nom du professeur, svp : </label>
-    <input type="" name="prof"><br>
-    <label for="motif">Entre le motif de l'absence, svp :</label><br>
-    <input type="radio" name="motif" value="malade">Maladie<br>
-    <input type="radio" name="motif" value="mort">Mort du petit chien<br>
-    <input type="radio" name="motif" value="activite">Activité extra-scolaire<br>
-    <input type="radio" name="motif" value="autre">Autre<br>
-    <input type="submit" value="Envoyer">
-
-    <?php
-    $nom = isset($_GET['name']);
-    $gender = isset($_GET['gender']);
-    $prof = isset($_GET['prof']);
-    $motif = isset($_GET['motif']);
-
-    /**
-     * 
-     * TODO
-     */
-
-     
-    ?>
+    <form action="mot.php" method="get">
+        <label for="name">Entrez le nom de votre enfant, svp : </label>
+        <input type="text" name="name"><br>
+        <label for="gender">Entre le genre de votre enfant, svp :</label>
+        <input type="radio" name="gender" value="garçon">Garçon
+        <input type="radio" name="gender" value="fille">Fille<br>
+        <label for="prof">Entrez le nom du professeur, svp : </label>
+        <input type="" name="prof"><br>
+        <label for="motif">Entre le motif de l'absence, svp :</label><br>
+        <input type="radio" name="motif" value="maladie">Maladie<br>
+        <input type="radio" name="motif" value="mort du petit chien">Mort du petit chien<br>
+        <input type="radio" name="motif" value="activité extra-scolaire">Activité extra-scolaire<br>
+        <input type="radio" name="motif" value="autre">Autre<br>
+        <input type="submit" value="Envoyer">
+    </form>
 
 </body>
 </html>
