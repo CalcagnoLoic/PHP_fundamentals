@@ -9,7 +9,7 @@
     <title>Fake notes!!!</title>
 </head>
 <body>
-    <h1>Exercice de consolidation : génération de fausses notes</h1>
+    <h1>Exercice de consolidation : génération de faux mots d'excuses</h1>
 
     <h2>Veuillez rentrer les informations requises :</h2>
 
