@@ -11,3 +11,13 @@ Les exercices abordés sont les suivants :
 * Les variables 
 
 * Les conditions 
+
+* Un générateur de mot d'excuses
+
+* Les arrays
+
+* Les loops
+
+* Les fonctions
+
+* Les formulaires
