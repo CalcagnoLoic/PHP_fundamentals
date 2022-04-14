@@ -11,7 +11,7 @@
 $word = isset($_POST['word']) ? $_POST['word'] : NULL;
 
 function captilazeWords($x) {
-    return ucwords($x);
+    return mb_convert_case($x, MB_CASE_TITLE);
 }
 
 echo '<br>';
@@ -39,9 +39,10 @@ echo "Il est actuellement " . date('H:i:s') . " et on est le " . date("d/m/Y")
 <?php 
 $nbr1 = isset($_POST['number1']) ? $_POST['number1'] : NULL;
 $nbr2 = isset($_POST['number2']) ? $_POST['number2'] : NULL;
+$error = "<p> Error: argument is the not a number. </p>";
 
 function sum( $x,  $y) {
-    return $x + $y;
+    return ($x == is_int($x) && $y == is_int($y)) ? $x + $y : $error ;
 }
 
 echo "La somme des deux nombres vaut : " . sum($nbr1, $nbr2);
@@ -84,17 +85,11 @@ echo '</pre>';
 
 <h2>Fonction qui remplace le æ par a et e  </h2>
 <?php 
-
-?>
-
-<h2></h2>
-<?php 
 $wordsReg2 = array('cæcotrophie', 'chænichthys', 'microsphæra', 'sphærotheca') ; 
 echo '<pre>';
 print_r($wordsReg2);
 echo '</pre>';
 echo "<br>";
-
 
 function useRegex2($x) {
     return preg_replace('/æ/', 'ae', $x);
@@ -105,25 +100,38 @@ print_r(useRegex2($wordsReg2));
 echo '</pre>';
 ?>
 
-<h2>Fonction /TODO/</h2>
+<h2>Fonction permettant de renvoyer un message d'erreur</h2>
 <?php 
+function displayError($err1, $err2){
+    return "<div class='$err1'>$err2</div>";
+}
 
-?>
-
-<h2>Fonction /TODO/</h2>
-<?php 
-
+echo displayError("error", "Incorrect email address");
 ?>
 
 <h2>Fonction créant un générateur de mot</h2>
-<h3>Bienvenue dans ce générateur de mot</h3>
-<form action="">
-    <input type="submit" value="Generate">
-</form>
-<?php 
-$letters = '/a-z/';
-$littleWord = "";
-$bigWord = "";
+<?php
+function randomWord() {
+    $letters = 'abcdefghijklmnopqrstuvwxyz';
+    $littleWord = "";
+    $bigWord = "";
+
+    for ($i=0; $i <5 ; $i++) { 
+        $countI = rand(0, strlen($letters));
+        $littleWord .= $letters[$countI];
+    }
+
+    for ($i=0; $i <15 ; $i++) { 
+        $countI = rand(0, strlen($letters));
+        $bigWord .= $letters[$countI];
+    }
+
+    echo $littleWord;
+    echo "<br>";
+    echo $bigWord;
+}
+
+randomWord();
 
 ?>
 
