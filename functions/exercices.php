@@ -64,42 +64,88 @@ function convertIntoAcronym($x) {
 echo ("La chaine de caractère devient l'acronyme suivant : " . convertIntoAcronym($str));
 ?>
 
-<h2></h2>
+<h2>Fonction qui remplace le a et e par æ</h2>
+<?php 
+$wordsReg = array('caecotrophie', 'chaenichthys', 'microsphaera', 'sphaerotheca') ; 
+echo '<pre>';
+print_r($wordsReg);
+echo '</pre>';
+echo "<br>";
+
+
+function useRegex($x) {
+    return preg_replace('/ae/', 'æ', $x);
+}
+
+echo '<pre>';
+print_r(useRegex($wordsReg));
+echo '</pre>';
+?>
+
+<h2>Fonction qui remplace le æ par a et e  </h2>
 <?php 
 
 ?>
 
 <h2></h2>
 <?php 
+$wordsReg2 = array('cæcotrophie', 'chænichthys', 'microsphæra', 'sphærotheca') ; 
+echo '<pre>';
+print_r($wordsReg2);
+echo '</pre>';
+echo "<br>";
 
+
+function useRegex2($x) {
+    return preg_replace('/æ/', 'ae', $x);
+}
+
+echo '<pre>';
+print_r(useRegex2($wordsReg2));
+echo '</pre>';
 ?>
 
-<h2></h2>
+<h2>Fonction /TODO/</h2>
 <?php 
 
 ?>
 
-<h2></h2>
+<h2>Fonction /TODO/</h2>
 <?php 
 
 ?>
 
-<h2></h2>
+<h2>Fonction créant un générateur de mot</h2>
+<h3>Bienvenue dans ce générateur de mot</h3>
+<form action="">
+    <input type="submit" value="Generate">
+</form>
 <?php 
+$letters = '/a-z/';
+$littleWord = "";
+$bigWord = "";
 
 ?>
 
-<h2></h2>
+<h2>Fonction permettant de décapitaliser un string</h2>
 <?php 
+$str2 = "STOP YELLING I CAN'T HEAR MYSELF THINKING!!";
+echo "La chaine de caractère avant de décapitaliser : " . $str2;
+echo "<br>";
 
+function decapilazeStr($x) {
+    return strtolower($x);
+}
+
+echo "La chaine de caractère avant de décapitaliser : " . decapilazeStr($str2);
 ?>
 
-<h2></h2>
+<h2>Fonction permettant calculer le volume d'un cône</h2>
+
 <?php 
+function calculate_cone_volume($ray, $height) {
+    return $ray * 5 * 3.14 * $height * (1/3);
+}
 
-?>
-
-<h2></h2>
-<?php 
-
+echo "The volume of a cone which ray is 5 and height is 2  is equal to " . calculate_cone_volume(5, 2) . "cm<sup>3</sup>"
 ?>
