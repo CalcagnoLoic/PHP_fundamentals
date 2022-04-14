@@ -76,9 +76,9 @@ if($now > '21:01' && $now <= '04:59') {echo "Good night!";};
   *-------------------------------------------------------------------------------------------------
   */
 
-$age = isset($_GET['age']);
-$gender = isset($_GET['gender']);
-$language = isset($_GET['language']);
+$age = isset($_GET['age']) ? $_GET['age'] : NULL;
+$gender = isset($_GET['gender']) ? $_GET['gender'] : NULL;
+$language = isset($_GET['language']) ? $_GET['language'] : NULL;
 
 if ($gender === 'man' && $language === "yes") {
     if ($age <= 12) {echo "Hello mister kiddo!";} 
