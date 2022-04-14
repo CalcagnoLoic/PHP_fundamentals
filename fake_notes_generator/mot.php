@@ -55,7 +55,27 @@
     </p>
 
     <ul>
-        <li> - <?php echo $motif?></li>
+        <li> - <?php 
+        echo $motif . " ";
+        switch ($motif) {
+            case 'maladie':
+                echo " : une angine a été diagnostiquée par le medecin de famille.";
+                break;
+
+            case 'mort du petit chien':
+                echo " : kiki, notre petit chihuahua s'est fait écraser ce matin.";
+                break;
+
+            case 'activité extra-scolaire':
+                echo " : une compétition mondiale de tennis de table est prévue durant les heures de cours du professeur.";
+                break;
+            
+            default:
+            echo " : l'école n'est absolument pas un centre d'intérêt!";
+                break;
+        }
+        ?>
+        </li>
     </ul>
     
     <p class="paragraphe">Veuillez accepter mes salutations distinguées</p>
