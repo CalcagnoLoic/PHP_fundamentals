@@ -4,20 +4,20 @@
     <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">
 </p>
 
-Durant ce parcours, différents exercices sont réalisés afin d'appréhender et comprendre le PHP. 
+During this course, different exercises are performed in order to understand PHP. 
 
-Les exercices abordés sont les suivants : 
+The exercises covered are the following: 
 
-* Les variables 
+* Variables 
 
-* Les conditions 
+* Conditions 
 
-* Un générateur de mot d'excuses
+* An excuse word generator
 
-* Les arrays
+* Arrays
 
-* Les boucles
+* Loops
 
-* Les fonctions
+* Functions
 
-* Les formulaires
+* Forms
